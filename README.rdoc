@@ -18,6 +18,8 @@ UserAgent is a Ruby library that parses and compares HTTP User Agents.
   # => '19.0.1084.56'
   user_agent.platform
   # => 'Macintosh'
+  user_agent.wechat?
+  # => false
 
 ==== Comparison
 

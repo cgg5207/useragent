@@ -52,6 +52,15 @@ class UserAgent
         detect_product(method) || super
       end
 
+      def wechat?
+        return false unless mobile?
+        if detect_product('MicroMessenger') || detect_comment('MicroMessenger')
+          true
+        else
+          false
+        end
+      end
+
       def mobile?
         if detect_product('Mobile') || detect_comment('Mobile')
           true
